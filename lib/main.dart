@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_demo/home/home_page.dart';
 import 'package:flutter_demo/ui/authentication/stackover.dart';
 
 void main() {
@@ -8,11 +9,19 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitDown,DeviceOrientation.portraitUp]);
 
-    runApp(StackOver());
-
-
+    runApp(MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: StackOver(),
+      // home: Home(),
+    );
+  }
+
+}
 const double width = 300.0;
 const double height = 50.0;
 const double loginAlign = -1;

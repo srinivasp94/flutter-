@@ -29,6 +29,7 @@ class _RewardCardsState extends State<RewardCards> {
       child: Swiper(
         containerHeight: 150.0,
         containerWidth: double.infinity,
+        physics: ClampingScrollPhysics(),
         itemBuilder: (BuildContext context, int index) {
           return Card(
             shape: RoundedRectangleBorder(

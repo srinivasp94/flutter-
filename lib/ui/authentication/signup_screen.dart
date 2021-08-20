@@ -29,189 +29,182 @@ class _SignupScreenState extends State<SignupScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: SingleChildScrollView(
-        child: ConstrainedBox(
-          constraints: BoxConstraints(),
-          child: Container(
-            child: Padding(
-              padding: EdgeInsets.all(12.0),
-              child: Column(
-                children: <Widget>[
-                  TextField(
-                    controller: signupNameController,
-                    keyboardType: TextInputType.name,
-                    decoration: InputDecoration(
-                      fillColor: Colors.white12,
-                      hintText: 'User Name ',
-                      prefixIcon: Icon(
-                        Icons.person_outline,
-                        color: Colors.grey[400],
-                      ),
-                      hintStyle: TextStyle(color: Colors.grey[400]),
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(24.0)),
-                        borderSide:
-                        BorderSide(color: Colors.grey[200], width: 1),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(24.0)),
-                        borderSide:
-                        BorderSide(color: Colors.deepPurple[200], width: 1),
-                      ),
-                    ),
-                    onChanged: (text) {
-                      setState(() {
-                        mName = text;
-                      });
-                    },
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  TextField(
-                    controller: signupEmailController,
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      fillColor: Colors.white12,
-                      hintText: 'Email ',
-                      prefixIcon: Icon(
-                        Icons.email_outlined,
-                        color: Colors.grey[400],
-                      ),
-                      hintStyle: TextStyle(
-                        color: Colors.grey[400],
-                      ),
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(24.0)),
-                        borderSide:
-                        BorderSide(color: Colors.grey[200], width: 1),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(24.0)),
-                        borderSide:
-                        BorderSide(color: Colors.deepPurple[200], width: 1),
-                      ),
-                    ),
-                    onChanged: (text) {
-                      setState(() {
-                        mEmail = text;
-                      });
-                    },
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  TextField(
-                    controller: signupMobileController,
-                    keyboardType: TextInputType.phone,
-                    decoration: InputDecoration(
-                      fillColor: Colors.white12,
-                      hintText: ' Mobile Number',
-                      prefixIcon: Icon(
-                        Icons.phone_outlined,
-                        color: Colors.grey[400],
-                      ),
-                      hintStyle: TextStyle(
-                        color: Colors.grey[400],
-                      ),
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(24.0)),
-                        borderSide:
-                        BorderSide(color: Colors.grey[200], width: 1),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(24.0)),
-                        borderSide:
-                        BorderSide(color: Colors.deepPurple[200], width: 1),
-                      ),
-                    ),
-                    onChanged: (text) {
-                      setState(() {
-                        mMobile = text;
-                      });
-                    },
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  TextField(
-                    controller: signuppasswordController,
-                    obscureText: true,
-                    keyboardType: TextInputType.text,
-                    decoration: InputDecoration(
-                      fillColor: Colors.white12,
-                      hintText: 'Password ',
-                      prefixIcon: Icon(
-                        Icons.lock_open,
-                        color: Colors.grey[400],
-                      ),
-                      hintStyle: TextStyle(color: Colors.grey[400]),
-                      filled: true,
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(24.0)),
-                        borderSide:
-                        BorderSide(color: Colors.grey[200], width: 1),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(24.0)),
-                        borderSide:
-                        BorderSide(color: Colors.deepPurple[200], width: 1),
-                      ),
-                    ),
-                    onChanged: (text) {
-                      setState(() {
-                        mPassword = text;
-                      });
-                    },
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Center(
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: double.infinity,
-                      child: Padding(
-                        padding: EdgeInsets.all(20.0),
-                        child: Text(
-                          "By pressing Submit you agree to \n terms & Conditions",
-                          style: TextStyle(
-                            fontSize: 12.0,
-                            color: Colors.grey,
-                          ),
-                        ),
-                      ),
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Wrap(
+          children: <Widget>[
+            TextField(
+              controller: signupNameController,
+              keyboardType: TextInputType.name,
+              decoration: InputDecoration(
+                fillColor: Colors.white12,
+                hintText: 'User Name ',
+                prefixIcon: Icon(
+                  Icons.person_outline,
+                  color: Colors.grey[400],
+                ),
+                hintStyle: TextStyle(color: Colors.grey[400]),
+                filled: true,
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                  borderSide:
+                  BorderSide(color: Colors.grey[200], width: 1),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                  borderSide:
+                  BorderSide(color: Colors.deepPurple[200], width: 1),
+                ),
+              ),
+              onChanged: (text) {
+                setState(() {
+                  mName = text;
+                });
+              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextField(
+              controller: signupEmailController,
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                fillColor: Colors.white12,
+                hintText: 'Email ',
+                prefixIcon: Icon(
+                  Icons.email_outlined,
+                  color: Colors.grey[400],
+                ),
+                hintStyle: TextStyle(
+                  color: Colors.grey[400],
+                ),
+                filled: true,
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                  borderSide:
+                  BorderSide(color: Colors.grey[200], width: 1),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                  borderSide:
+                  BorderSide(color: Colors.deepPurple[200], width: 1),
+                ),
+              ),
+              onChanged: (text) {
+                setState(() {
+                  mEmail = text;
+                });
+              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextField(
+              controller: signupMobileController,
+              keyboardType: TextInputType.phone,
+              decoration: InputDecoration(
+                fillColor: Colors.white12,
+                hintText: ' Mobile Number',
+                prefixIcon: Icon(
+                  Icons.phone_outlined,
+                  color: Colors.grey[400],
+                ),
+                hintStyle: TextStyle(
+                  color: Colors.grey[400],
+                ),
+                filled: true,
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                  borderSide:
+                  BorderSide(color: Colors.grey[200], width: 1),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                  borderSide:
+                  BorderSide(color: Colors.deepPurple[200], width: 1),
+                ),
+              ),
+              onChanged: (text) {
+                setState(() {
+                  mMobile = text;
+                });
+              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextField(
+              controller: signuppasswordController,
+              obscureText: true,
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                fillColor: Colors.white12,
+                hintText: 'Password ',
+                prefixIcon: Icon(
+                  Icons.lock_open,
+                  color: Colors.grey[400],
+                ),
+                hintStyle: TextStyle(color: Colors.grey[400]),
+                filled: true,
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                  borderSide:
+                  BorderSide(color: Colors.grey[200], width: 1),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                  borderSide:
+                  BorderSide(color: Colors.deepPurple[200], width: 1),
+                ),
+              ),
+              onChanged: (text) {
+                setState(() {
+                  mPassword = text;
+                });
+              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Center(
+              child: Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Text(
+                    "By pressing Submit you agree to \n terms & Conditions",
+                    style: TextStyle(
+                      fontSize: 12.0,
+                      color: Colors.grey,
                     ),
                   ),
-                  SizedBox(
-                    height: 6,
-                  ),
-                  Container(
-                      width: double.infinity,
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: ElevatedButton(
-                          onPressed: (() {
-                            setState(() {
-                              validateRegisterForm();
-                            });
-                          }),
-                          child: Text(
-                            "REGITSTER",
-                            style: TextStyle(
-                              fontSize: 18.0,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ))
-                ],
+                ),
               ),
             ),
-          ),
+            SizedBox(
+              height: 6,
+            ),
+            Container(
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: ElevatedButton(
+                    onPressed: (() {
+                      setState(() {
+                        validateRegisterForm();
+                      });
+                    }),
+                    child: Text(
+                      "REGITSTER",
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ))
+          ],
         ),
       ),
     );
