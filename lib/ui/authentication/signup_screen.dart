@@ -182,6 +182,22 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
             ),
+            Center(
+              child: Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                child: Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Text(
+                    "By pressing Submit you agree to \n terms & Conditions",
+                    style: TextStyle(
+                      fontSize: 12.0,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+              ),
+            ),
             SizedBox(
               height: 6,
             ),

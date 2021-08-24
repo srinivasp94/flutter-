@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/ui/authentication/tab_pages.dart';
+import 'package:flutter_demo/ui/bills/bill_payment_screen.dart';
 import 'package:flutter_demo/ui/bottompages/cards_screen.dart';
 import 'package:flutter_demo/ui/bottompages/swipe_reward_cards.dart';
 import 'package:flutter_demo/ui/cart/redemption_page.dart';
 import 'package:flutter_demo/ui/catagory/catalogueScreen.dart';
 import 'package:flutter_demo/ui/profile/profile_view_screen.dart';
 import 'package:flutter_demo/ui/promotions/promotion_screen.dart';
+import 'package:flutter_demo/ui/referral/referral_screen.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -60,8 +62,9 @@ class _HomeState extends State<Home> {
               _cardsScreen,
               _cartScreen,
               new RedemptionScreen(),
-              new ProfileView(),
-              // new PromotionsScreen()
+             // new ProfileView(),
+             // new ReferralScreen()
+              new BillPaymentScreen()
 
             ],
           )
