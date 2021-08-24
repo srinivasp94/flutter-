@@ -51,6 +51,9 @@ class _BillPaymentScreenState extends State<BillPaymentScreen> {
             new DropdownButton(
                 items: dropDownPartnerList,
                 value: _selectedPartner,
+                isExpanded: true,
+                hint: Text('Select Merchant'),
+                // underline: Container(),
                 onChanged: changedPartnerDropDown
             ),
             SizedBox(

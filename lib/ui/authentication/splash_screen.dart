@@ -2,7 +2,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/ui/authentication/stackover.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 5), () {
+      // TODO: check for already logged in or not
+       Navigator.of(context).push(MaterialPageRoute(builder: (_) => StackOver()));
+       Navigator.of(context).pushNamed('/');
+
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
