@@ -140,7 +140,7 @@ class _StackOverState extends State<StackOver>
                                     // Container(height: 300, color: Colors.green,),
 
                                     // second tab bar view widget
-                                    SignupScreen()
+                                    SignUpScreen()
                                   ],
                                 ),
                               ),

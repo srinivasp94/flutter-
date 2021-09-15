@@ -3,8 +3,9 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_demo/home/home_page.dart';
-import 'package:flutter_demo/ui/authentication/bloc/sign_in_bloc.dart';
-import 'package:flutter_demo/ui/authentication/bloc/sign_in_state.dart';
+import 'package:flutter_demo/ui/authentication/sign_in/bloc/sign_in_bloc.dart';
+import 'package:flutter_demo/ui/authentication/sign_in/bloc/sign_in_state.dart';
+import 'package:flutter_demo/ui/authentication/sign_up/bloc/sign_up_bloc.dart';
 import 'package:flutter_demo/ui/authentication/splash_screen.dart';
 import 'package:flutter_demo/ui/authentication/stackover.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<SignInBloc>(create: (context) => SignInBloc(SignInInitialState())),
+        BlocProvider<SignUpBloc>(create: (context) => SignUpBloc(SignUpInitial())),
       ],
       child: MaterialApp(
         home: StackOver(),

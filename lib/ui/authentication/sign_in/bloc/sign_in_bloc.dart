@@ -4,8 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_demo/model/LoginResponse.dart';
 import 'package:flutter_demo/model/LoginUser.dart';
 import 'package:flutter_demo/network/DigestAuth.dart';
-import 'package:flutter_demo/ui/authentication/bloc/sign_in_event.dart';
-import 'package:flutter_demo/ui/authentication/bloc/sign_in_state.dart';
+import 'package:flutter_demo/ui/authentication/sign_in/bloc/sign_in_event.dart';
+import 'package:flutter_demo/ui/authentication/sign_in/bloc/sign_in_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SignInBloc extends Bloc<SignInEvent, SignInState> {
