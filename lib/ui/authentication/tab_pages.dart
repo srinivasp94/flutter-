@@ -14,7 +14,7 @@ class HomeTabPage extends StatelessWidget {
               tabs: [
                 Tab(
 
-                  text: 'Signin',
+                  text: 'Sign In',
                 ),
                 Tab(
 
